@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/data/app_data.dart';
@@ -37,9 +39,7 @@ class _PostsPageState extends State<PostsPage> with AutoRouteAwareStateMixin<Pos
                 PostTile(
                   tileColor: posts[i].color,
                   postTitle: posts[i].title,
-                  onTileTap: () => context.pushRoute(
-                    SinglePostRoute(postId: posts[i].id),
-                  ),
+                  onTileTap: () => context.pushRoute(SinglePostRoute(postId: posts[i].id)),
                 ),
             ],
           ),
