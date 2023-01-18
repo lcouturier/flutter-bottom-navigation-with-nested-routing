@@ -11,7 +11,10 @@ class UsersWrapperPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const AutoRouter();
+    return AutoRouter(
+      inheritNavigatorObservers: false,
+      navigatorObservers: () => [AutoRouteObserver()],
+    );
   }
 }
 
